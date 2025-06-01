@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завантаження...</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: red;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .message {
+      display: none;
+      text-align: center;
+      font-size: 1.5em;
+      white-space: pre-line;
+    }
+
+    .show {
+      display: block;
+    }
+
+    @keyframes glitch {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; transform: scale(1.02); }
+    }
+
+    .glitch {
+      animation: glitch 0.6s infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="message" id="message">
+    ⚠️ ВИРУС ВИЯВЛЕНО ⚠️
+
+    Всі дані буде знищено...
+    Система заражена.
+    📂 📁 📂 📁
+
+    Втеча неможлива.
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('message').classList.add('show', 'glitch');
+    }, 2000); // Показ через 2 секунди
+  </script>
+
+</body>
+</html>
